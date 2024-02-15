@@ -1,0 +1,14 @@
+{
+  "name": "react-native-qoi",
+  "version": "0.0.0",
+  "description": "qoi render for RN",
+  "main": "src/index",
+  "codegenConfig": {
+    "name": "RNQoiViewSpec",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme"
+}
