@@ -1,0 +1,9 @@
+{
+  "name": "react-native-metrica",
+  "version": "0.0.0",
+  "description": "appmetrica for RN",
+  "main": "src/index",
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme"
+}

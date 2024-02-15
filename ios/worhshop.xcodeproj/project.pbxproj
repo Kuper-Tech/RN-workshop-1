@@ -41,6 +41,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-worhshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worhshop.release.xcconfig"; path = "Target Support Files/Pods-worhshop/Pods-worhshop.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-worhshop-worhshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worhshop-worhshopTests.debug.xcconfig"; path = "Target Support Files/Pods-worhshop-worhshopTests/Pods-worhshop-worhshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-worhshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-worhshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C9412EB2B7E6184007A54E8 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../modules/metrica/ios; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = worhshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-worhshop-worhshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worhshop-worhshopTests.release.xcconfig"; path = "Target Support Files/Pods-worhshop-worhshopTests/Pods-worhshop-worhshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -106,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C9412EA2B7E616C007A54E8 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C9412EB2B7E6184007A54E8 /* ios */,
+			);
+			name = modules;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +125,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6C9412EA2B7E616C007A54E8 /* modules */,
 				13B07FAE1A68108700A75B9A /* worhshop */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* worhshopTests */,

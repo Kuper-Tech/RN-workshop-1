@@ -5,14 +5,16 @@
  * @format
  */
 
-import React from 'react';
+import React, {useCallback, useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -24,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {activate, reportEvent} from './modules/metrica/src';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,6 +65,17 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  useEffect(() => {
+    activate('9c810afd-4b86-43d6-9a14-eaabfb5a3b17');
+  }, []);
+
+  const onPress = useCallback(() => {
+    reportEvent('click on section one', {
+      fromPlatform: Platform.OS,
+      isNative: true,
+    });
+  }, []);
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -76,10 +90,12 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
+          <TouchableOpacity onPress={onPress}>
+            <Section title="Step One">
+              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+              screen and then come back to see your edits.
+            </Section>
+          </TouchableOpacity>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
