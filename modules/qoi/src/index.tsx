@@ -1,2 +1,2 @@
-export { default as QoiView } from './QoiViewNativeComponent';
+export {default as QoiView} from './QoiViewNativeComponent';
 export * from './QoiViewNativeComponent';

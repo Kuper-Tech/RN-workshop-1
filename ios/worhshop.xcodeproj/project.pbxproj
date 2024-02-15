@@ -42,6 +42,7 @@
 		5B7EB9410499542E8C5724F5 /* Pods-worhshop-worhshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worhshop-worhshopTests.debug.xcconfig"; path = "Target Support Files/Pods-worhshop-worhshopTests/Pods-worhshop-worhshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-worhshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-worhshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9412EB2B7E6184007A54E8 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../modules/metrica/ios; sourceTree = "<group>"; };
+		6C9412ED2B7E6DCB007A54E8 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../../modules/qoi/ios; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = worhshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-worhshop-worhshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worhshop-worhshopTests.release.xcconfig"; path = "Target Support Files/Pods-worhshop-worhshopTests/Pods-worhshop-worhshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -110,9 +111,18 @@
 		6C9412EA2B7E616C007A54E8 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C9412EC2B7E6DC2007A54E8 /* qoi */,
 				6C9412EB2B7E6184007A54E8 /* ios */,
 			);
 			name = modules;
+			sourceTree = "<group>";
+		};
+		6C9412EC2B7E6DC2007A54E8 /* qoi */ = {
+			isa = PBXGroup;
+			children = (
+				6C9412ED2B7E6DCB007A54E8 /* ios */,
+			);
+			path = qoi;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -582,13 +592,17 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRN_FABRIC_ENABLED",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DRN_FABRIC_ENABLED",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -653,13 +667,17 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRN_FABRIC_ENABLED",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DRN_FABRIC_ENABLED",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

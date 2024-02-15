@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {activate, reportEvent} from './modules/metrica/src';
+import {QoiView} from './modules/qoi/src';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -96,21 +97,16 @@ function App(): React.JSX.Element {
               screen and then come back to see your edits.
             </Section>
           </TouchableOpacity>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <QoiView url="https://raw.githubusercontent.com/floooh/qoiview/main/images/dice.qoi" />
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
+
+// https://raw.githubusercontent.com/floooh/qoiview/main/images/dice.qoi
+// https://raw.githubusercontent.com/mzgreen/qoi-kotlin/main/qoi_test_images/testcard_rgba.qoi
+// https://raw.githubusercontent.com/mzgreen/qoi-kotlin/main/qoi_test_images/orange-cross.qoi
 
 const styles = StyleSheet.create({
   sectionContainer: {
