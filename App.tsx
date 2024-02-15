@@ -66,14 +66,20 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  useEffect(() => {
-    activate('9c810afd-4b86-43d6-9a14-eaabfb5a3b17');
-  }, []);
+  // useEffect(() => {
+  //   activate('9c810afd-4b86-43d6-9a14-eaabfb5a3b17');
+  // }, []);
 
-  const onPress = useCallback(() => {
-    reportEvent('click on section one', {
-      fromPlatform: Platform.OS,
-      isNative: true,
+  // const onPress = useCallback(() => {
+  //   reportEvent('click on section one', {
+  //     fromPlatform: Platform.OS,
+  //     isNative: true,
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      console.log(1123213);
     });
   }, []);
 
@@ -91,13 +97,14 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <TouchableOpacity onPress={onPress}>
-            <Section title="Step One">
-              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-              screen and then come back to see your edits.
-            </Section>
-          </TouchableOpacity>
-          <QoiView url="https://raw.githubusercontent.com/floooh/qoiview/main/images/dice.qoi" />
+          <Section title="Step One">
+            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <QoiView
+            url="https://raw.githubusercontent.com/mzgreen/qoi-kotlin/main/qoi_test_images/testcard_rgba.qoi"
+            style={styles.image}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -124,6 +131,10 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  image: {
+    width: 500,
+    height: 500,
   },
 });
 
