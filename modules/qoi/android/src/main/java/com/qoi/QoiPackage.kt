@@ -9,7 +9,7 @@ import java.util.ArrayList
 class QoiViewPackage : ReactPackage {
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
     val viewManagers: MutableList<ViewManager<*, *>> = ArrayList()
-    viewManagers.add(QoiViewManager())
+    viewManagers.add(QoiViewManager(reactContext))
     return viewManagers
   }
 

@@ -102,7 +102,7 @@ function App(): React.JSX.Element {
             screen and then come back to see your edits.
           </Section>
           <QoiView
-            url="https://raw.githubusercontent.com/mzgreen/qoi-kotlin/main/qoi_test_images/testcard_rgba.qoi"
+            url="https://raw.githubusercontent.com/mzgreen/qoi-kotlin/main/qoi_test_images/orange-cross.qoi"
             style={styles.image}
           />
         </View>
@@ -133,8 +133,8 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   image: {
-    width: 500,
-    height: 500,
+    width: 200,
+    height: 200,
   },
 });
 
